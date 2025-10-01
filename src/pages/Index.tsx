@@ -1,12 +1,49 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import Navigation from "@/components/Navigation";
+import ApplicationsSection from "@/components/ApplicationsSection";
+import RecruitersSection from "@/components/RecruitersSection";
+import NetworkingSection from "@/components/NetworkingSection";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Card } from "@/components/ui/card";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-background">
+      <Navigation />
+      
+      <main className="max-w-5xl mx-auto px-4 py-6">
+        <div className="mb-6">
+          <h1 className="text-2xl font-bold text-foreground mb-2">Career Dashboard</h1>
+          <p className="text-muted-foreground">Track your applications, connect with recruiters, and grow your network</p>
+        </div>
+
+        <Tabs defaultValue="applications" className="w-full">
+          <TabsList className="grid w-full grid-cols-3 mb-6 bg-card border">
+            <TabsTrigger value="applications" className="data-[state=active]:bg-background data-[state=active]:text-primary">
+              Applications
+            </TabsTrigger>
+            <TabsTrigger value="recruiters" className="data-[state=active]:bg-background data-[state=active]:text-primary">
+              Recruiters
+            </TabsTrigger>
+            <TabsTrigger value="networking" className="data-[state=active]:bg-background data-[state=active]:text-primary">
+              Networking
+            </TabsTrigger>
+          </TabsList>
+          
+          <Card className="p-6">
+            <TabsContent value="applications" className="mt-0">
+              <ApplicationsSection />
+            </TabsContent>
+            
+            <TabsContent value="recruiters" className="mt-0">
+              <RecruitersSection />
+            </TabsContent>
+            
+            <TabsContent value="networking" className="mt-0">
+              <NetworkingSection />
+            </TabsContent>
+          </Card>
+        </Tabs>
+      </main>
     </div>
   );
 };

@@ -1,0 +1,50 @@
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { User, Briefcase } from "lucide-react";
+
+interface RecruiterCardProps {
+  name: string;
+  title: string;
+  company: string;
+  message: string;
+  time: string;
+}
+
+const RecruiterCard = ({ name, title, company, message, time }: RecruiterCardProps) => {
+  return (
+    <Card className="p-4 hover:shadow-md transition-shadow">
+      <div className="flex gap-3 mb-3">
+        <Avatar className="h-12 w-12">
+          <AvatarFallback className="bg-primary/10 text-primary">
+            <User className="h-6 w-6" />
+          </AvatarFallback>
+        </Avatar>
+        
+        <div className="flex-1 min-w-0">
+          <h3 className="font-semibold text-foreground truncate">{name}</h3>
+          <p className="text-sm text-muted-foreground truncate">{title}</p>
+          <div className="flex items-center gap-1 text-xs text-muted-foreground">
+            <Briefcase className="h-3 w-3" />
+            <span>{company}</span>
+          </div>
+        </div>
+        
+        <span className="text-xs text-muted-foreground whitespace-nowrap">{time}</span>
+      </div>
+      
+      <p className="text-sm text-foreground mb-4 line-clamp-2">{message}</p>
+      
+      <div className="flex gap-2">
+        <Button size="sm" variant="outline" className="flex-1">
+          View Profile
+        </Button>
+        <Button size="sm" className="flex-1">
+          Reply
+        </Button>
+      </div>
+    </Card>
+  );
+};
+
+export default RecruiterCard;
