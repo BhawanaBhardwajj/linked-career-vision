@@ -1,4 +1,5 @@
 import ConnectionCard from "./ConnectionCard";
+import NetworkOpportunityCard from "./NetworkOpportunityCard";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
@@ -33,6 +34,30 @@ const NetworkingSection = () => {
   const requests = connections.filter(c => c.type === "request");
   const suggestions = connections.filter(c => c.type === "suggestion");
 
+  const networkOpportunities = [
+    {
+      jobTitle: "Senior Software Engineer",
+      company: "Microsoft",
+      connectionName: "John Doe",
+      connectionTitle: "Engineering Manager at Microsoft",
+      mutualConnections: 24,
+    },
+    {
+      jobTitle: "Product Designer",
+      company: "Airbnb",
+      connectionName: "Emma Wilson",
+      connectionTitle: "Design Lead at Airbnb",
+      mutualConnections: 18,
+    },
+    {
+      jobTitle: "Frontend Developer",
+      company: "Shopify",
+      connectionName: "Ryan Lee",
+      connectionTitle: "Senior Developer at Shopify",
+      mutualConnections: 31,
+    },
+  ];
+
   return (
     <div className="space-y-6">
       <div>
@@ -41,9 +66,22 @@ const NetworkingSection = () => {
           <span className="text-sm text-muted-foreground">{requests.length} pending</span>
         </div>
         
-        <div className="space-y-3 mb-4">
+        <div className="space-y-3">
           {requests.map((connection, index) => (
             <ConnectionCard key={index} {...connection} />
+          ))}
+        </div>
+      </div>
+
+      <div>
+        <div className="flex items-center justify-between mb-4">
+          <h2 className="text-xl font-semibold text-foreground">Career Opportunities in Your Network</h2>
+          <span className="text-sm text-muted-foreground">{networkOpportunities.length} available</span>
+        </div>
+        
+        <div className="space-y-3">
+          {networkOpportunities.map((opportunity, index) => (
+            <NetworkOpportunityCard key={index} {...opportunity} />
           ))}
         </div>
       </div>

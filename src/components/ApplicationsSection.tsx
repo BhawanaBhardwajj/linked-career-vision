@@ -10,6 +10,8 @@ const ApplicationsSection = () => {
       location: "San Francisco, CA",
       appliedDate: "2 days ago",
       status: "interview" as const,
+      deadline: "May 15, 2025",
+      progress: 75,
     },
     {
       title: "React Developer",
@@ -17,6 +19,7 @@ const ApplicationsSection = () => {
       location: "Remote",
       appliedDate: "1 week ago",
       status: "applied" as const,
+      progress: 25,
     },
     {
       title: "Full Stack Engineer",
@@ -24,6 +27,8 @@ const ApplicationsSection = () => {
       location: "New York, NY",
       appliedDate: "2 weeks ago",
       status: "offer" as const,
+      deadline: "May 10, 2025",
+      progress: 100,
     },
     {
       title: "UI/UX Developer",
@@ -31,6 +36,7 @@ const ApplicationsSection = () => {
       location: "Austin, TX",
       appliedDate: "3 weeks ago",
       status: "rejected" as const,
+      progress: 50,
     },
   ];
 

@@ -9,23 +9,23 @@ interface StatusBadgeProps {
 const statusConfig = {
   applied: {
     label: "Applied",
-    className: "bg-blue-50 text-blue-700 border-blue-200",
+    className: "bg-primary/10 text-primary border-primary/20",
   },
   interview: {
     label: "Interview Scheduled",
-    className: "bg-amber-50 text-amber-700 border-amber-200",
+    className: "bg-amber-50 text-amber-700 border-amber-200 dark:bg-amber-950 dark:text-amber-400 dark:border-amber-800",
   },
   offer: {
     label: "Offer",
-    className: "bg-green-50 text-green-700 border-green-200",
+    className: "bg-emerald-50 text-emerald-700 border-emerald-200 dark:bg-emerald-950 dark:text-emerald-400 dark:border-emerald-800",
   },
   rejected: {
     label: "Not Selected",
-    className: "bg-red-50 text-red-700 border-red-200",
+    className: "bg-red-50 text-red-700 border-red-200 dark:bg-red-950 dark:text-red-400 dark:border-red-800",
   },
   pending: {
     label: "Pending",
-    className: "bg-gray-50 text-gray-700 border-gray-200",
+    className: "bg-muted text-muted-foreground border-border",
   },
 };
 

@@ -10,6 +10,7 @@ const RecruitersSection = () => {
       company: "Meta",
       message: "Hi! I came across your profile and would love to discuss an exciting opportunity for a Senior React Developer position on our team.",
       time: "2h ago",
+      status: "new" as const,
     },
     {
       name: "Michael Chen",
@@ -17,6 +18,7 @@ const RecruitersSection = () => {
       company: "Google",
       message: "Your experience with React and TypeScript caught my attention. Would you be interested in learning about our Frontend Engineering roles?",
       time: "1d ago",
+      status: "replied" as const,
     },
     {
       name: "Emily Rodriguez",
@@ -24,6 +26,7 @@ const RecruitersSection = () => {
       company: "Amazon",
       message: "We're looking for talented engineers to join our team. I'd love to connect and share more details about opportunities that might interest you.",
       time: "3d ago",
+      status: "pending" as const,
     },
   ];
 
