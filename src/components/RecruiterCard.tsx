@@ -41,11 +41,14 @@ const RecruiterCard = ({ name, title, company, message, time, status }: Recruite
         <p className="text-sm text-foreground line-clamp-2 bg-muted/30 p-3 rounded-md">{message}</p>
       </div>
       
-      <div className="flex gap-2">
-        <Button size="sm" variant="outline" className="flex-1">
+      <div className="flex gap-2 flex-wrap">
+        <Button size="sm" variant="outline" className="flex-1 min-w-[100px]">
           View Profile
         </Button>
-        <Button size="sm" className="flex-1">
+        <Button size="sm" variant="outline" className="flex-1 min-w-[100px]">
+          View Job Post
+        </Button>
+        <Button size="sm" className="flex-1 min-w-[100px]">
           Reply
         </Button>
       </div>

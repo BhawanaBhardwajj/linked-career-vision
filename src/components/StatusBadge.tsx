@@ -24,7 +24,7 @@ const statusConfig = {
     className: "bg-red-50 text-red-700 border-red-200 dark:bg-red-950 dark:text-red-400 dark:border-red-800",
   },
   pending: {
-    label: "Pending",
+    label: "Not Applied",
     className: "bg-muted text-muted-foreground border-border",
   },
 };
