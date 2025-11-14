@@ -1,7 +1,6 @@
 import Navigation from "@/components/Navigation";
 import ApplicationsSection from "@/components/ApplicationsSection";
 import RecruitersSection from "@/components/RecruitersSection";
-import NetworkingSection from "@/components/NetworkingSection";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card } from "@/components/ui/card";
 
@@ -17,15 +16,12 @@ const Index = () => {
         </div>
 
         <Tabs defaultValue="applications" className="w-full">
-          <TabsList className="grid w-full grid-cols-3 mb-6 bg-card border">
+          <TabsList className="grid w-full grid-cols-2 mb-6 bg-card border">
             <TabsTrigger value="applications" className="data-[state=active]:bg-background data-[state=active]:text-primary">
               Applications
             </TabsTrigger>
             <TabsTrigger value="recruiters" className="data-[state=active]:bg-background data-[state=active]:text-primary">
               Recruiters
-            </TabsTrigger>
-            <TabsTrigger value="networking" className="data-[state=active]:bg-background data-[state=active]:text-primary">
-              Networking
             </TabsTrigger>
           </TabsList>
           
@@ -36,10 +32,6 @@ const Index = () => {
             
             <TabsContent value="recruiters" className="mt-0">
               <RecruitersSection />
-            </TabsContent>
-            
-            <TabsContent value="networking" className="mt-0">
-              <NetworkingSection />
             </TabsContent>
           </Card>
         </Tabs>
